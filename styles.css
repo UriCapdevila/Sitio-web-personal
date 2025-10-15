@@ -10,7 +10,7 @@
 .dark-mode {
   --bg-color: #0d1117;            /* Fondo general: negro azulado profundo */
   --text-color: #c9d1d9;          /* Texto gris claro */
-  --accent-color: #161b22;        /* Fondo de secciones: gris oscuro */
+  --accent-color: #18202b;        /* Fondo de secciones: gris oscuro */
   --card-color: #1f2933;          /* Tarjetas: gris carbón */
   --highlight-color: #58a6ff;     /* Acento: azul claro relajante */
   --footer-bg: #0d1117;           /* Footer: igual al fondo */
@@ -18,10 +18,8 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-image: url('images/fondo-profesional.png');
+  /* background-image: url('images/fondo-profesional.png'); */
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
