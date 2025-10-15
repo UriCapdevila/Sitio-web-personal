@@ -1,21 +1,20 @@
 :root {
-  --bg-color: #f5f7fa;              /* Fondo claro sólido */
-  --text-color: #1a1a1a;            /* Texto principal */
-  --accent-color: #005f73;          /* Fondo de secciones */
-  --card-color: #7db3ff;            /* Fondo de tarjetas */
-  --highlight-color: #0a9396;       /* Color de acento */
-  --footer-bg: #2c3e50;             /* Fondo del footer */
-  --footer-text: #ecf0f1;           /* Texto del footer */
+  --bg-color: #ffffff;            /* Fondo blanco puro */
+  --text-color: #1a1a1a;          /* Texto negro suave */
+  --accent-color: #f0f4f8;        /* Fondo de secciones: gris azulado claro */
+  --card-color: #e3f2fd;          /* Tarjetas: azul cielo suave */
+  --highlight-color: #0077cc;     /* Acento: azul vibrante */
+  --footer-bg: #e0e0e0;           /* Footer: gris claro */
+  --footer-text: #1a1a1a;         /* Texto del footer */
 }
-
 .dark-mode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --accent-color: #0a9396;
-  --card-color: #1e1e1e;
-  --highlight-color: #94d2bd;
-  --footer-bg: #0d1b2a;
-  --footer-text: #cdd6f4;
+  --bg-color: #0d1117;            /* Fondo general: negro azulado profundo */
+  --text-color: #c9d1d9;          /* Texto gris claro */
+  --accent-color: #161b22;        /* Fondo de secciones: gris oscuro */
+  --card-color: #1f2933;          /* Tarjetas: gris carbón */
+  --highlight-color: #58a6ff;     /* Acento: azul claro relajante */
+  --footer-bg: #0d1117;           /* Footer: igual al fondo */
+  --footer-text: #8b949e;         /* Texto del footer: gris medio */
 }
 
 body {
