@@ -24,7 +24,7 @@ body, html {
 }
 
 .dark-mode {
-  --bg-color: #1c1c1c;               /* Fondo general gris carbón profundo */
+  --bg-color: #131212;               /* Fondo general gris carbón profundo */
   --text-color: #dcdcdc;             /* Texto gris claro */
   --accent-color: #161b22;           /* Fondo de secciones gris oscuro */
   --accent-rgb: 22, 27, 34;          /* Versión RGB para transparencia */
@@ -58,7 +58,7 @@ section {
   backdrop-filter: blur(2px);
   box-sizing: border-box;
 }
-/* Navbar */
+/* Navbar base */
 header {
   background-color: var(--accent-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -74,14 +74,32 @@ header {
   border: 2px solid var(--text-color);
   border-radius: 5px;
   margin: 0 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   background-color: var(--text-color);
   color: var(--bg-color);
+  border-color: var(--text-color);
 }
 
+/* Navbar en modo oscuro */
+.dark-mode header {
+  background-color: var(--accent-color);
+}
+
+.dark-mode .navbar,
+.dark-mode .navbar-nav .nav-link,
+.dark-mode .navbar-brand {
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  background-color: var(--highlight-color);
+  color: var(--bg-color);
+  border-color: var(--highlight-color);
+}
 /* Toggle modo oscuro */
 .switch {
   position: relative;
@@ -192,21 +210,20 @@ input:checked + .slider:before {
   color: var(--text-color);
 }
 
-/* Footer */
-.footer {
-  background-color: var(--footer-bg);
+footer {
+  background-color: var(--bg-color);
   color: var(--footer-text);
   padding: 40px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.03);
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
-.footer h5 {
-  color: var(--highlight-color);
-}
-.footer a {
+
+.dark-mode footer {
+  background-color: var(--bg-color);
   color: var(--footer-text);
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 8px 16px rgba(255, 255, 255, 0.03);
 }
 
 /* Responsive */
