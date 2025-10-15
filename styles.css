@@ -1,11 +1,11 @@
 :root {
-  --bg-color: #f5f7fa;
-  --text-color: #1a1a1a;
-  --accent-color: #005f73;
-  --card-color: #e0e5ec;
-  --highlight-color: #0a9396;
-  --footer-bg: #2c3e50;
-  --footer-text: #ecf0f1;
+  --bg-color: #f5f7fa;              /* Fondo claro sólido */
+  --text-color: #1a1a1a;            /* Texto principal */
+  --accent-color: #005f73;          /* Fondo de secciones */
+  --card-color: #7db3ff;            /* Fondo de tarjetas */
+  --highlight-color: #0a9396;       /* Color de acento */
+  --footer-bg: #2c3e50;             /* Fondo del footer */
+  --footer-text: #ecf0f1;           /* Texto del footer */
 }
 
 .dark-mode {
@@ -19,11 +19,15 @@
 }
 
 body {
-  background-image: url('images/fondo-profesional.jpg');
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('images/fondo-profesional.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: var(--text-color);
 }
 
 main {
@@ -47,6 +51,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  color: var(--text-color);
 }
 
 .navbar-nav .nav-link {
