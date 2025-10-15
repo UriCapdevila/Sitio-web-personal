@@ -13,7 +13,7 @@ body, html {
 }
 
 :root {
-  --bg-color: #fefefe;               /* Fondo general blanco cálido */
+  --bg-color: #f0f4f8;               /* Fondo general blanco cálido */
   --text-color: #2e2e2e;             /* Texto gris oscuro suave */
   --accent-color: #e8f0fe;           /* Fondo de secciones pastel azul claro */
   --accent-rgb: 232, 240, 254;       /* Versión RGB para transparencia */
