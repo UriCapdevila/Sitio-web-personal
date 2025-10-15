@@ -12,24 +12,25 @@ html, body {
 }
 
 :root {
-  --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-  --accent-color: #f9fbfd;
-  --card-color: #e3f2fd;
-  --highlight-color: #0077cc;
-  --footer-bg: #e0e0e0;
-  --footer-text: #1a1a1a;
+  --bg-color: #fefefe;              /* Fondo general: blanco cálido */
+  --text-color: #2e2e2e;            /* Texto: gris oscuro suave */
+  --accent-color: #e8f0fe;          /* Fondo de secciones: azul pastel claro */
+  --card-color: #fdf6f0;            /* Tarjetas: crema suave */
+  --highlight-color: #a3c4f3;       /* Acento: azul lavanda pastel */
+  --footer-bg: #f0f4f8;             /* Footer: gris azulado claro */
+  --footer-text: #4a4a4a;           /* Texto del footer: gris medio */
 }
 
 .dark-mode {
-  --bg-color: #0d1117;
-  --text-color: #c9d1d9;
-  --accent-color: #161b22;
-  --card-color: #1f2933;
-  --highlight-color: #58a6ff;
-  --footer-bg: #0d1117;
-  --footer-text: #8b949e;
+  --bg-color: #1c1c1c;
+  --text-color: #dcdcdc;
+  --accent-color: #2a2f3a;
+  --card-color: #333842;
+  --highlight-color: #8ab4f8;
+  --footer-bg: #1c1c1c;
+  --footer-text: #a0a0a0;
 }
+
 /* Global */
 
 body {
