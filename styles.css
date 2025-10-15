@@ -4,33 +4,35 @@
   box-sizing: border-box;
 }
 
-html, body {
+body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 :root {
-  --bg-color: #fefefe;              /* Fondo general: blanco cálido */
-  --text-color: #2e2e2e;            /* Texto: gris oscuro suave */
-  --accent-color: #e8f0fe;          /* Fondo de secciones: azul pastel claro */
-  --card-color: #fdf6f0;            /* Tarjetas: crema suave */
-  --highlight-color: #a3c4f3;       /* Acento: azul lavanda pastel */
-  --footer-bg: #f0f4f8;             /* Footer: gris azulado claro */
-  --footer-text: #4a4a4a;           /* Texto del footer: gris medio */
+  --bg-color: #fefefe;               /* Fondo general blanco cálido */
+  --text-color: #2e2e2e;             /* Texto gris oscuro suave */
+  --accent-color: #e8f0fe;           /* Fondo de secciones pastel azul claro */
+  --accent-rgb: 232, 240, 254;       /* Versión RGB para transparencia */
+  --card-color: #fdf6f0;             /* Tarjetas crema suave */
+  --highlight-color: #a3c4f3;        /* Azul lavanda pastel */
+  --footer-bg: #f0f4f8;              /* Footer gris azulado claro */
+  --footer-text: #4a4a4a;            /* Texto del footer gris medio */
 }
 
 .dark-mode {
-  --bg-color: #1c1c1c;
-  --text-color: #dcdcdc;
-  --accent-color: #2a2f3a;
-  --card-color: #333842;
-  --highlight-color: #8ab4f8;
-  --footer-bg: #1c1c1c;
-  --footer-text: #a0a0a0;
+  --bg-color: #1c1c1c;               /* Fondo general gris carbón profundo */
+  --text-color: #dcdcdc;             /* Texto gris claro */
+  --accent-color: #161b22;           /* Fondo de secciones gris oscuro */
+  --accent-rgb: 22, 27, 34;          /* Versión RGB para transparencia */
+  --card-color: #2a2f3a;             /* Tarjetas gris grafito */
+  --highlight-color: #8ab4f8;        /* Azul claro relajante */
+  --footer-bg: #1c1c1c;              /* Footer igual al fondo */
+  --footer-text: #a0a0a0;            /* Texto del footer gris medio claro */
 }
-
 /* Global */
 
 body {
@@ -48,12 +50,14 @@ main {
 
 /* Secciones */
 section {
-  width: 100%;
-  padding: 60px 0;
-  background-color: var(--accent-color);
+  width: 100vw;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: rgba(var(--accent-rgb), 0.95);
   color: var(--text-color);
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
 }
-
 /* Navbar */
 header {
   background-color: var(--accent-color);
@@ -109,6 +113,13 @@ input:checked + .slider {
 }
 input:checked + .slider:before {
   transform: translateX(26px);
+}
+
+/* Contenedor */
+.container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Biografía */
