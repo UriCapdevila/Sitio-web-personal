@@ -1,30 +1,28 @@
 :root {
-  --bg-color: #ffffff;            /* Fondo blanco puro */
-  --text-color: #1a1a1a;          /* Texto negro suave */
-  --accent-color: #f0f4f8;        /* Fondo de secciones: gris azulado claro */
-  --card-color: #e3f2fd;          /* Tarjetas: azul cielo suave */
-  --highlight-color: #0077cc;     /* Acento: azul vibrante */
-  --footer-bg: #e0e0e0;           /* Footer: gris claro */
-  --footer-text: #1a1a1a;         /* Texto del footer */
-}
-.dark-mode {
-  --bg-color: #0d1117;            /* Fondo general: negro azulado profundo */
-  --text-color: #c9d1d9;          /* Texto gris claro */
-  --accent-color: #18202b;        /* Fondo de secciones: gris oscuro */
-  --card-color: #1f2933;          /* Tarjetas: gris carbón */
-  --highlight-color: #58a6ff;     /* Acento: azul claro relajante */
-  --footer-bg: #0d1117;           /* Footer: igual al fondo */
-  --footer-text: #8b949e;         /* Texto del footer: gris medio */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --accent-color: #f9fbfd;
+  --card-color: #e3f2fd;
+  --highlight-color: #0077cc;
+  --footer-bg: #e0e0e0;
+  --footer-text: #1a1a1a;
 }
 
+.dark-mode {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --accent-color: #161b22;
+  --card-color: #1f2933;
+  --highlight-color: #58a6ff;
+  --footer-bg: #0d1117;
+  --footer-text: #8b949e;
+}
+/* Global */
+
 body {
-  /* background-image: url('images/fondo-profesional.png'); */
   background-color: var(--bg-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 main {
@@ -38,6 +36,7 @@ section {
   padding: 60px 20px;
   background-color: var(--accent-color);
   color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Navbar */
