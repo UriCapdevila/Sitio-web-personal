@@ -29,7 +29,7 @@
           <li class="nav-item"><a class="nav-link" href="#biografia">Biografía</a></li>
           <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="#education-experience">Educación y Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link" href="#download-cv">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#download-cv">Curriculum</a></li>
         </ul>
         <div class="ml-3">
           <label class="switch" aria-label="Activar modo oscuro">
@@ -100,7 +100,7 @@
 
     <!-- CV -->
     <section id="download-cv" class="container py-5 text-center">
-      <h2>Descargar mi CV</h2>
+      <h2>Descargar mi Curriculum</h2>
       <a href="documentos/URIELCAPDEVILACV.pdf" download="URIELCAPDEVILACV" class="btn btn-primary mt-3">Descargar CV</a>
     </section>
 
@@ -162,7 +162,7 @@
           <li><a href="#biografia">Biografía</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#education-experience">Educación y Experiencia</a></li>
-          <li><a href="#download-cv">CV</a></li>
+          <li><a href="#download-cv">Curriculum</a></li>
         </ul>
       </div>
       <div class="col-md-4">
@@ -182,20 +182,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 
 <script>
-  // Toggle modo oscuro
-  const toggle = document.getElementById('modeToggle');
-  toggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-  });
+// Toggle modo oscuro
+const toggle = document.getElementById('modeToggle');
+toggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode');
 
-  // Reinicio de animaciones en skills
-  function resetAnimation() {
-    const skills = document.querySelectorAll('.card');
-    skills.forEach(skill => {
-      skill.classList.remove('animate__animated', 'animate__pulse');
-      void skill.offsetWidth;
-      skill.classList.add('animate__animated', 'animate__pulse');
-    });
-  }
-  setInterval(resetAnimation, 10000);
+  // Reiniciar animaciones en cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.classList.remove('animate__animated', 'animate__fadeInUp');
+    void card.offsetWidth; // Fuerza reflow
+    card.classList.add('animate__animated', 'animate__fadeInUp');
+  });
+});
 </script>

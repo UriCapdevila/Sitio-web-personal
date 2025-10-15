@@ -21,7 +21,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#biografia">Biografía</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#download-cv">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#download-cv">Curriculum</a></li>
           <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portafolio</a></li>
         </ul>
         <div class="ml-3">
@@ -92,7 +92,7 @@
           <ul class="list-unstyled">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#biografia">Biografía</a></li>
-            <li><a href="index.html#download-cv">CV</a></li>
+            <li><a href="index.html#download-cv">Curriculum</a></li>
             <li><a href="portfolio.html">Portafolio</a></li>
           </ul>
         </div>
@@ -111,22 +111,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 
   <script>
-    // Toggle modo oscuro
-    const toggle = document.getElementById('modeToggle');
-    toggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
-    });
+// Toggle modo oscuro
+const toggle = document.getElementById('modeToggle');
+toggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode');
 
-    // Reinicio de animaciones en cards
-    function resetAnimation() {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        card.classList.remove('animate__animated', 'animate__pulse');
-        void card.offsetWidth;
-        card.classList.add('animate__animated', 'animate__pulse');
-      });
-    }
-    setInterval(resetAnimation, 10000);
+  // Reiniciar animaciones en cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.classList.remove('animate__animated', 'animate__fadeInUp');
+    void card.offsetWidth; // Fuerza reflow
+    card.classList.add('animate__animated', 'animate__fadeInUp');
+  });
+});
   </script>
 
 </body>
