@@ -145,6 +145,24 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* Indicador textual del modo oscuro */
+#darkModeLabel {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: var(--highlight-color);
+  color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dark-mode #darkModeLabel {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
 /* Contenedor */
 
 .container {
@@ -175,6 +193,38 @@ input:checked + .slider:before {
 
 #skills h2 {
   color: var(--bg-color);
+}
+
+#skills .card {
+  background-color: var(--card-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #skills .card:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+#skills .card-title {
+  color: var(--text-color);
+}
+
+/* Educación y Experiencia */
+
+#education-experience h2 {
+  margin-bottom: 40px;
+}
+
+#education-experience h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* CV y Experiencia */

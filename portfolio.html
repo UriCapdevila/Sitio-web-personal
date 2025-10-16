@@ -9,7 +9,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body>
+<body class="bg-custom">
 
   <!-- Navbar -->
   <header>
@@ -36,44 +36,46 @@
   </header>
 
   <!-- Contenido principal -->
-  <main class="container py-5">
+  <main>
     <section id="portfolio-content" class="text-center">
-      <h1 class="mb-4">Mis Proyectos</h1>
-      <p class="mb-5">Aquí encontrarás una selección de mis proyectos más destacados.</p>
+      <div class="container">
+        <h1 class="mb-4">Mis Proyectos</h1>
+        <p class="mb-5">Aquí encontrarás una selección de mis proyectos más destacados.</p>
 
-      <div class="row">
-        <!-- Proyecto 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
-            <img src="images/proyecto1.png" class="card-img-top" alt="Captura del proyecto FraudeCero">
-            <div class="card-body">
-              <h5 class="card-title">FraudeCero</h5>
-              <p class="card-text">Plataforma para detección de fraudes online con validación de usuarios y dashboard de control.</p>
-              <a href="https://github.com/UriCapdevila/FraudeCero" target="_blank" class="btn btn-primary">Ver proyecto</a>
+        <div class="row justify-content-center">
+          <!-- Proyecto 1 -->
+          <div class="project-card">
+            <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+              <img src="images/proyecto1.png" class="card-img-top" alt="Captura del proyecto FraudeCero">
+              <div class="card-body">
+                <h5 class="card-title">FraudeCero</h5>
+                <p class="card-text">Plataforma para detección de fraudes online con validación de usuarios y dashboard de control.</p>
+                <a href="https://github.com/UriCapdevila/FraudeCero" target="_blank" class="btn btn-primary">Ver proyecto</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Proyecto 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
-            <img src="images/proyecto2.png" class="card-img-top" alt="Captura del Dashboard de Ventas">
-            <div class="card-body">
-              <h5 class="card-title">Dashboard de Ventas</h5>
-              <p class="card-text">Dashboard interactivo con Power BI y SQL para análisis de ventas multicanal.</p>
-              <a href="#" class="btn btn-primary">Ver proyecto</a>
+          <!-- Proyecto 2 -->
+          <div class="project-card">
+            <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+              <img src="images/proyecto2.png" class="card-img-top" alt="Captura del Dashboard de Ventas">
+              <div class="card-body">
+                <h5 class="card-title">Dashboard de Ventas</h5>
+                <p class="card-text">Dashboard interactivo con Power BI y SQL para análisis de ventas multicanal.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Proyecto 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
-            <img src="images/proyecto3.png" class="card-img-top" alt="Captura del sitio web personal">
-            <div class="card-body">
-              <h5 class="card-title">Sitio Web Personal</h5>
-              <p class="card-text">Este mismo sitio, desarrollado con HTML, CSS, Bootstrap y animaciones personalizadas.</p>
-              <a href="index.html" class="btn btn-primary">Ver sitio</a>
+          <!-- Proyecto 3 -->
+          <div class="project-card">
+            <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+              <img src="images/proyecto3.png" class="card-img-top" alt="Captura del sitio web personal">
+              <div class="card-body">
+                <h5 class="card-title">Sitio Web Personal</h5>
+                <p class="card-text">Este mismo sitio, desarrollado con HTML, CSS, Bootstrap y animaciones personalizadas.</p>
+                <a href="index.html" class="btn btn-primary">Ver sitio</a>
+              </div>
             </div>
           </div>
         </div>
@@ -120,7 +122,6 @@
         toggle.addEventListener('change', () => {
           document.body.classList.toggle('dark-mode');
 
-          // Reiniciar animaciones en cards
           const cards = document.querySelectorAll('.card');
           cards.forEach(card => {
             card.classList.remove('animate__animated', 'animate__fadeInUp');
@@ -130,7 +131,6 @@
         });
       }
 
-      // Animación continua en cards cada 10 segundos
       setInterval(() => {
         const cards = document.querySelectorAll('.card');
         cards.forEach(card => {

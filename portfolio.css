@@ -1,20 +1,36 @@
+/* Fondo sólido para evitar franjas blancas */
+html, body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fondo de la sección principal */
+#portfolio-content {
+  background-color: var(--bg-color);
+  padding-top: 80px; /* compensación por navbar fija */
+}
+
 /* Distribución armoniosa de las cards */
 #portfolio-content .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 /* Cards centradas y responsivas */
 #portfolio-content .card {
-  width: 100%;
-  max-width: 320px;
-  margin: auto;
+  flex: 0 1 300px;
+  max-width: 300px;
+  margin: 10px;
   background-color: var(--card-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
 }
 
 #portfolio-content .card:hover {
@@ -22,15 +38,16 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.dark-mode #portfolio-content .card {
+  background-color: var(--card-color);
+}
+
 .dark-mode #portfolio-content .card:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 /* Títulos y textos dentro de las cards */
-#portfolio-content .card-title {
-  color: var(--text-color);
-}
-
+#portfolio-content .card-title,
 #portfolio-content .card-text {
   color: var(--text-color);
 }
@@ -60,6 +77,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   #portfolio-content .card {
+    flex: 1 1 90vw;
     max-width: 90vw;
   }
 }

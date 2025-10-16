@@ -15,7 +15,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body>
+<body class="bg-custom">
 
   <!-- Navbar -->
   <header>
@@ -31,18 +31,18 @@
           <li class="nav-item"><a class="nav-link" href="#education-experience">Educación y Experiencia</a></li>
           <li class="nav-item"><a class="nav-link" href="#download-cv">Curriculum</a></li>
         </ul>
-        <div class="ml-3">
-          <label class="switch" aria-label="Activar modo oscuro">
-            <input type="checkbox" id="modeToggle">
-            <span class="slider"></span>
-          </label>
+       <div class="ml-3 d-flex align-items-center">
+        <label class="switch" aria-label="Activar modo oscuro">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider"></span>
+        </label>
+        <span class="ml-2 badge badge-info" id="darkModeLabel">Modo oscuro</span>
         </div>
       </div>
     </nav>
   </header>
 
   <main>
-
     <!-- Biografía -->
     <section id="biografia" class="container py-5">
       <div class="row align-items-center">
@@ -62,41 +62,60 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="container py-5">
-      <h2 class="text-center mb-4">SKILLS</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-3 mb-4">
-          <div class="card text-center animate__animated animate__fadeInUp">
-            <img src="iconos/py.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de Python">
-            <div class="card-body"><h5 class="card-title">Python</h5></div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="card text-center animate__animated animate__fadeInUp">
-            <img src="iconos/html.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de HTML">
-            <div class="card-body"><h5 class="card-title">HTML</h5></div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="card text-center animate__animated animate__fadeInUp">
-            <img src="iconos/css.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de CSS">
-            <div class="card-body"><h5 class="card-title">CSS</h5></div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="card text-center animate__animated animate__fadeInUp">
-            <img src="iconos/javascript.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de JavaScript">
-            <div class="card-body"><h5 class="card-title">JavaScript</h5></div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <div class="card text-center animate__animated animate__fadeInUp">
-            <img src="iconos/sql.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de SQL">
-            <div class="card-body"><h5 class="card-title">SQL</h5></div>
-          </div>
+<section id="skills" class="container py-5">
+  <h2 class="text-center mb-4">SKILLS</h2>
+  <div class="row justify-content-center">
+    <!-- Python -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center animate__animated animate__fadeInUp">
+        <img src="iconos/py.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de Python">
+        <div class="card-body">
+          <h5 class="card-title">Python</h5>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- HTML -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center animate__animated animate__fadeInUp">
+        <img src="iconos/html.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de HTML">
+        <div class="card-body">
+          <h5 class="card-title">HTML</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center animate__animated animate__fadeInUp">
+        <img src="iconos/css.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de CSS">
+        <div class="card-body">
+          <h5 class="card-title">CSS</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center animate__animated animate__fadeInUp">
+        <img src="iconos/javascript.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de JavaScript">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- SQL -->
+    <div class="col-md-3 mb-4">
+      <div class="card text-center animate__animated animate__fadeInUp">
+        <img src="iconos/sql.png" class="card-img-top mx-auto mt-3" style="width:60px;" alt="Logo de SQL">
+        <div class="card-body">
+          <h5 class="card-title">SQL</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- CV -->
     <section id="download-cv" class="container py-5 text-center">
@@ -145,71 +164,69 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="footer py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h5>Sobre mí</h5>
-        <p>Apasionado estudiante en búsqueda de nuevos desafíos.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Sobre mí</h5>
+          <p>Apasionado estudiante en búsqueda de nuevos desafíos.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#education-experience">Educación y Experiencia</a></li>
+            <li><a href="#download-cv">Curriculum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Email: Uri_CapdevilaWRK@outlook.com</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Enlaces útiles</h5>
-        <ul class="list-unstyled">
-          <li><a href="#biografia">Biografía</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#education-experience">Educación y Experiencia</a></li>
-          <li><a href="#download-cv">Curriculum</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h5>Contacto</h5>
-        <p>Email: Uri_CapdevilaWRK@outlook.com</p>
+      <div class="text-center mt-3">
+        &copy; 2025 Uriel Capdevila. Todos los derechos reservados.
       </div>
     </div>
-    <div class="text-center mt-3">
-      &copy; 2025 Uriel Capdevila. Todos los derechos reservados.
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Scripts -->
+  <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" defer></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('modeToggle');
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('modeToggle');
 
-  if (toggle) {
-    toggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
+    if (toggle) {
+      toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
 
-      // Reiniciar animaciones en cards
+        // Reiniciar animaciones en cards
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+          card.classList.remove('animate__animated', 'animate__fadeInUp');
+          void card.offsetWidth;
+          card.classList.add('animate__animated', 'animate__fadeInUp');
+        });
+      });
+    }
+
+    // Animación continua en cards cada 10 segundos
+    setInterval(() => {
       const cards = document.querySelectorAll('.card');
       cards.forEach(card => {
-        card.classList.remove('animate__animated', 'animate__fadeInUp');
+        card.classList.remove('animate__animated', 'animate__pulse');
         void card.offsetWidth;
-        card.classList.add('animate__animated', 'animate__fadeInUp');
+        card.classList.add('animate__animated', 'animate__pulse');
       });
-    });
-  }
-
-  // Animación continua en cards cada 10 segundos
-  setInterval(() => {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.classList.remove('animate__animated', 'animate__pulse');
-      void card.offsetWidth;
-      card.classList.add('animate__animated', 'animate__pulse');
-    });
-  }, 10000);
-});
+    }, 10000);
+  });
 </script>
-
 </body>
 </html>
