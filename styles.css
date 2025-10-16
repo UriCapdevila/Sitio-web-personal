@@ -13,26 +13,27 @@ body, html {
 }
 
 :root {
-  --bg-color: #f0f4f8;               /* Fondo general blanco cálido */
-  --text-color: #2e2e2e;             /* Texto gris oscuro suave */
-  --accent-color: #e8f0fe;           /* Fondo de secciones pastel azul claro */
-  --accent-rgb: 232, 240, 254;       /* Versión RGB para transparencia */
-  --card-color: #fdf6f0;             /* Tarjetas crema suave */
-  --highlight-color: #a3c4f3;        /* Azul lavanda pastel */
-  --footer-bg: #f0f4f8;              /* Footer gris azulado claro */
-  --footer-text: #4a4a4a;            /* Texto del footer gris medio */
+  --bg-color: #f0f4f8;
+  --text-color: #2e2e2e;
+  --accent-color: #e8f0fe;
+  --accent-rgb: 232, 240, 254;
+  --card-color: #fdf6f0;
+  --highlight-color: #a3c4f3;
+  --footer-bg: #f0f4f8;
+  --footer-text: #4a4a4a;
 }
 
 .dark-mode {
-  --bg-color: #131212;               /* Fondo general gris carbón profundo */
-  --text-color: #dcdcdc;             /* Texto gris claro */
-  --accent-color: #161b22;           /* Fondo de secciones gris oscuro */
-  --accent-rgb: 22, 27, 34;          /* Versión RGB para transparencia */
-  --card-color: #2a2f3a;             /* Tarjetas gris grafito */
-  --highlight-color: #8ab4f8;        /* Azul claro relajante */
-  --footer-bg: #1c1c1c;              /* Footer igual al fondo */
-  --footer-text: #a0a0a0;            /* Texto del footer gris medio claro */
+  --bg-color: #131212;
+  --text-color: #dcdcdc;
+  --accent-color: #161b22;
+  --accent-rgb: 22, 27, 34;
+  --card-color: #2a2f3a;
+  --highlight-color: #8ab4f8;
+  --footer-bg: #1c1c1c;
+  --footer-text: #a0a0a0;
 }
+
 /* Global */
 
 body {
@@ -49,6 +50,7 @@ main {
 }
 
 /* Secciones */
+
 section {
   width: 100vw;
   min-height: 100vh;
@@ -58,7 +60,9 @@ section {
   backdrop-filter: blur(2px);
   box-sizing: border-box;
 }
+
 /* Navbar base */
+
 header {
   background-color: var(--accent-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -70,10 +74,15 @@ header {
 }
 
 .navbar-nav .nav-link {
+  display: block;
+  min-width: 120px;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px 12px;
+  margin: 10px auto;
+  border-radius: 5px;
   color: var(--text-color);
   border: 2px solid var(--text-color);
-  border-radius: 5px;
-  margin: 0 10px;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -84,6 +93,7 @@ header {
 }
 
 /* Navbar en modo oscuro */
+
 .dark-mode header {
   background-color: var(--accent-color);
 }
@@ -100,7 +110,9 @@ header {
   color: var(--bg-color);
   border-color: var(--highlight-color);
 }
+
 /* Toggle modo oscuro */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -134,6 +146,7 @@ input:checked + .slider:before {
 }
 
 /* Contenedor */
+
 .container {
   max-width: 100%;
   padding-left: 0;
@@ -141,6 +154,7 @@ input:checked + .slider:before {
 }
 
 /* Biografía */
+
 .profile-image {
   max-width: 100%;
   border-radius: 50%;
@@ -158,32 +172,13 @@ input:checked + .slider:before {
 }
 
 /* Skills */
+
 #skills h2 {
   color: var(--bg-color);
 }
 
-.card {
-  background-color: var(--card-color);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease, color 0.4s ease;
-}
+/* CV y Experiencia */
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode .card:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
-}
-
-.card-title {
-  color: var(--text-color);
-}
-
-/* CV y Portfolio */
 .btn {
   background-color: var(--card-color);
   color: var(--text-color);
@@ -198,7 +193,6 @@ input:checked + .slider:before {
   transform: scale(1.05);
 }
 
-/* Educación y Experiencia */
 .item {
   background-color: var(--card-color);
   border-radius: 10px;
@@ -209,6 +203,8 @@ input:checked + .slider:before {
 .item h4 {
   color: var(--text-color);
 }
+
+/* Footer */
 
 footer {
   background-color: var(--bg-color);
@@ -227,6 +223,7 @@ footer {
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
   .navbar-nav {
     flex-direction: column;
@@ -234,5 +231,11 @@ footer {
   }
   .navbar-nav .nav-item {
     margin-bottom: 10px;
+  }
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
   }
 }

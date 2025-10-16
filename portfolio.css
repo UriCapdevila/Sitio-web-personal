@@ -1,0 +1,65 @@
+/* Distribución armoniosa de las cards */
+#portfolio-content .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cards centradas y responsivas */
+#portfolio-content .card {
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#portfolio-content .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #portfolio-content .card:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+/* Títulos y textos dentro de las cards */
+#portfolio-content .card-title {
+  color: var(--text-color);
+}
+
+#portfolio-content .card-text {
+  color: var(--text-color);
+}
+
+/* Botones dentro de las cards */
+#portfolio-content .btn {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#portfolio-content .btn:hover {
+  background-color: var(--text-color);
+  color: var(--highlight-color);
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+#portfolio-content .card.animate__animated {
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #portfolio-content .card {
+    max-width: 90vw;
+  }
+}
