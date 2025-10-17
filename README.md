@@ -1,31 +1,37 @@
-# 🌐 Portfolio Web - Uriel Capdevila
+# 🌐 Portfolio Web — Uriel Capdevila
 
-Bienvenido a mi sitio web personal, desarrollado para mostrar quién soy, qué hago y cómo pienso el desarrollo web. Este proyecto es más que una vitrina: es una experiencia visual y técnica que refleja mi enfoque estratégico, mi pasión por la estética y mi compromiso con la mejora continua.
+> Sitio web personal desarrollado para reflejar mi identidad como desarrollador Full Stack con enfoque en estética, escalabilidad y experiencia de usuario.
+
+![Responsive](https://img.shields.io/badge/Responsive-Yes-4caf50?style=flat-square)
+![Modo Oscuro](https://img.shields.io/badge/Modo%20Oscuro-Activable-8ab4f8?style=flat-square)
+![Estado](https://img.shields.io/badge/En%20Desarrollo-Activos%20nuevos%20proyectos-f39c12?style=flat-square)
 
 ---
 
 ## ✨ Características destacadas
 
-- **Diseño responsivo y armonioso** con paleta pastel/dark
-- **Modo oscuro persistente** entre pestañas gracias a `localStorage`
-- **Animaciones suaves** con `Animate.css` y transiciones personalizadas
-- **Cards de proyecto interactivas** con hover, sombra y escalado
-- **Navegación fluida** con scroll compensado para evitar solapamiento por navbar
-- **Estructura modular** con CSS refactorizado y clases personalizadas (`.card-skill`, `.btn-custom`, etc.)
+- 🎨 **Diseño responsivo y armonioso** con paleta pastel/dark
+- 🌙 **Modo oscuro persistente** entre pestañas gracias a `localStorage`
+- 🎞️ **Animaciones suaves** con `Animate.css` y transiciones personalizadas
+- 🧩 **Estructura modular** con clases reutilizables (`.card-skill`, `.btn-custom`, etc.)
+- 🧭 **Navegación fluida** con scroll compensado para evitar solapamiento por navbar
+- 🧠 **Código limpio y escalable**, ideal para futuras integraciones
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- HTML5 + CSS3
-- Bootstrap 4.5
-- JavaScript vanilla
-- Animate.css
-- Power BI y SQL (en proyectos integrados)
-- Python y Flask (en proyectos complementarios)
+- **HTML5 + CSS3**
+- **Bootstrap 4.5**
+- **JavaScript Vanilla**
+- **Animate.css**
+- **Power BI y SQL** (en proyectos integrados)
+- **Python y Flask** (en proyectos complementarios)
 
 ---
 
-##📬 Contacto
-  Podés escribirme a: Uri_CapdevilaWRK@outlook.com
+## 🚀 Cómo usar
 
+1. Cloná el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/portfolio-web.git
