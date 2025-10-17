@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: var(--bg-color);
-  scroll-behavior: smooth;
-
-}
-
 :root {
   --bg-color: #f0f4f8;
   --text-color: #2e2e2e;
@@ -24,6 +14,9 @@ body, html {
   --highlight-color: #a3c4f3;
   --footer-bg: #f0f4f8;
   --footer-text: #4a4a4a;
+  --shadow-light: 0 4px 8px rgba(0,0,0,0.1);
+  --shadow-dark: 0 8px 16px rgba(255,255,255,0.1);
+  --radius-soft: 10px;
 }
 
 .dark-mode {
@@ -39,7 +32,10 @@ body, html {
 
 /* Global */
 
-body {
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -52,7 +48,6 @@ main {
   background-color: var(--bg-color);
 }
 
-
 /* Secciones */
 
 section {
@@ -62,10 +57,8 @@ section {
   background-color: rgba(var(--accent-rgb), 0.95);
   color: var(--text-color);
   backdrop-filter: blur(2px);
-  box-sizing: border-box;
 }
 
-/* Compensación de scroll por navbar fija */
 section:target::before {
   content: "";
   display: block;
@@ -73,7 +66,7 @@ section:target::before {
   margin-top: -76px;
 }
 
-/* Navbar base */
+/* Navbar */
 
 header {
   background-color: var(--accent-color);
@@ -104,12 +97,6 @@ header {
   border-color: var(--text-color);
 }
 
-/* Navbar en modo oscuro */
-
-.dark-mode header {
-  background-color: var(--accent-color);
-}
-
 .dark-mode .navbar,
 .dark-mode .navbar-nav .nav-link,
 .dark-mode .navbar-brand {
@@ -131,7 +118,9 @@ header {
   width: 50px;
   height: 24px;
 }
+
 .switch input { display: none; }
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -141,6 +130,7 @@ header {
   transition: .4s;
   border-radius: 24px;
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -150,14 +140,15 @@ header {
   transition: .4s;
   border-radius: 50%;
 }
+
 input:checked + .slider {
   background-color: var(--highlight-color);
 }
+
 input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Indicador textual del modo oscuro */
 #darkModeLabel {
   font-size: 0.85rem;
   padding: 6px 10px;
@@ -188,7 +179,17 @@ input:checked + .slider:before {
 .profile-image {
   max-width: 100%;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-light);
+}
+
+.profile-responsive {
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .profile-responsive {
+    width: 100%;
+  }
 }
 
 .social-media img {
@@ -197,6 +198,7 @@ input:checked + .slider:before {
   margin: 0 10px;
   transition: transform 0.3s;
 }
+
 .social-media img:hover {
   transform: scale(1.2);
 }
@@ -207,24 +209,24 @@ input:checked + .slider:before {
   color: var(--bg-color);
 }
 
-#skills .card {
+.card-skill {
   background-color: var(--card-color);
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#skills .card:hover {
+.card-skill:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode #skills .card:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+.dark-mode .card-skill:hover {
+  box-shadow: var(--shadow-dark);
 }
 
-#skills .card-title {
+.card-skill .card-title {
   color: var(--text-color);
 }
 
@@ -239,9 +241,21 @@ input:checked + .slider:before {
   margin-bottom: 20px;
 }
 
-/* CV y Experiencia */
+.item {
+  background-color: var(--card-color);
+  border-radius: var(--radius-soft);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-light);
+}
 
-.btn {
+.item h4 {
+  color: var(--text-color);
+}
+
+/* Botones */
+
+.btn-custom {
   background-color: var(--card-color);
   color: var(--text-color);
   border: none;
@@ -249,21 +263,11 @@ input:checked + .slider:before {
   padding: 10px 20px;
   transition: background-color 0.3s, transform 0.3s;
 }
-.btn:hover {
+
+.btn-custom:hover {
   background-color: var(--text-color);
   color: var(--highlight-color);
   transform: scale(1.05);
-}
-
-.item {
-  background-color: var(--card-color);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.item h4 {
-  color: var(--text-color);
 }
 
 /* Footer */
@@ -278,8 +282,6 @@ footer {
 }
 
 .dark-mode footer {
-  background-color: var(--bg-color);
-  color: var(--footer-text);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 8px 16px rgba(255, 255, 255, 0.03);
 }
@@ -295,7 +297,6 @@ footer {
     margin-bottom: 10px;
   }
   .navbar-nav .nav-link {
-    display: block;
     width: 100%;
     max-width: 200px;
     margin: 10px auto;

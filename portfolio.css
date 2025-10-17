@@ -1,4 +1,4 @@
-/* Fondo sólido para evitar franjas blancas */
+/* === Fondo sólido y comportamiento global === */
 html, body {
   background-color: var(--bg-color);
   margin: 0;
@@ -7,20 +7,20 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* === Compensación por navbar fija === */
 section:target::before {
   content: "";
   display: block;
-  height: 76px; /* altura de la navbar */
+  height: 76px;
   margin-top: -76px;
 }
 
-/* Fondo de la sección principal */
+/* === Sección principal de portfolio === */
 #portfolio-content {
   background-color: var(--bg-color);
-  padding-top: 80px; /* compensación por navbar fija */
+  padding-top: 80px;
 }
 
-/* Distribución armoniosa de las cards */
 #portfolio-content .row {
   display: flex;
   flex-wrap: wrap;
@@ -30,8 +30,8 @@ section:target::before {
   margin: 0 auto;
 }
 
-/* Cards centradas y responsivas */
-#portfolio-content .card {
+/* === Cards de proyecto === */
+.card-proyecto {
   flex: 0 1 300px;
   max-width: 300px;
   margin: 10px;
@@ -41,50 +41,52 @@ section:target::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
 }
 
-#portfolio-content .card:hover {
+.card-proyecto:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode #portfolio-content .card {
+.dark-mode .card-proyecto {
   background-color: var(--card-color);
 }
 
-.dark-mode #portfolio-content .card:hover {
+.dark-mode .card-proyecto:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
-/* Títulos y textos dentro de las cards */
-#portfolio-content .card-title,
-#portfolio-content .card-text {
+/* === Textos dentro de las cards === */
+.card-proyecto .card-title,
+.card-proyecto .card-text {
   color: var(--text-color);
 }
 
-/* Botones dentro de las cards */
-#portfolio-content .btn {
+/* === Botones de proyecto === */
+.btn-proyecto {
   background-color: var(--card-color);
   color: var(--text-color);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
-#portfolio-content .btn:hover {
+.btn-proyecto:hover {
   background-color: var(--text-color);
   color: var(--highlight-color);
   transform: scale(1.05);
 }
 
-/* Animaciones */
-#portfolio-content .card.animate__animated {
+/* === Animaciones personalizadas === */
+.card-proyecto.animate__animated {
   animation-duration: 0.8s;
   animation-delay: 0.2s;
 }
 
-/* Responsive */
+/* === Responsive unificado === */
 @media (max-width: 768px) {
-  #portfolio-content .card {
+  .card-proyecto {
     flex: 1 1 90vw;
     max-width: 90vw;
   }
