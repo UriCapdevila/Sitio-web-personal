@@ -7,14 +7,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* === Compensación por navbar fija === */
-section:target::before {
-  content: "";
-  display: block;
-  height: 76px;
-  margin-top: -76px;
-}
-
 /* === Sección principal de portfolio === */
 #portfolio-content {
   background-color: var(--bg-color);
