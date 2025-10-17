@@ -6,6 +6,13 @@ html, body {
   overflow-x: hidden;
 }
 
+section:target::before {
+  content: "";
+  display: block;
+  height: 76px; /* altura de la navbar */
+  margin-top: -76px;
+}
+
 /* Fondo de la sección principal */
 #portfolio-content {
   background-color: var(--bg-color);
