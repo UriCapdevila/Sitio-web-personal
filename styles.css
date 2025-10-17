@@ -262,12 +262,16 @@ input:checked + .slider:before {
   border-radius: 5px;
   padding: 10px 20px;
   transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+
 }
 
 .btn-custom:hover {
   background-color: var(--text-color);
   color: var(--highlight-color);
   transform: scale(1.05);
+  text-decoration: none;
+
 }
 
 /* Footer */

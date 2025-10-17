@@ -76,6 +76,8 @@ section:target::before {
   background-color: var(--text-color);
   color: var(--highlight-color);
   transform: scale(1.05);
+  text-decoration: none;
+
 }
 
 /* === Animaciones personalizadas === */
