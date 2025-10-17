@@ -36,49 +36,47 @@
 
   <!-- Contenido principal -->
   <main>
-    <section id="portfolio-content" class="text-center">
-      <div class="container">
-        <h1 class="mb-4">Mis Proyectos</h1>
-        <p class="mb-5">Aquí encontrarás una selección de mis proyectos más destacados.</p>
+    <section id="portfolio-content" class="container text-center">
+      <h1 class="mb-4">Mis Proyectos</h1>
+      <p class="mb-5">Aquí encontrarás una selección de mis proyectos más destacados.</p>
 
-        <div class="row justify-content-center">
-  <!-- Proyecto 1 -->
-  <div class="project-card">
-    <div class="card-proyecto animate__animated animate__fadeInUp">
-      <img src="images/proyecto1.png" class="card-img-top" alt="Captura del proyecto FraudeCero">
-      <div class="card-body">
-        <h5 class="card-title">FraudeCero</h5>
-        <p class="card-text">Plataforma para detección de fraudes online con validación de usuarios y dashboard de control.</p>
-        <a href="https://github.com/UriCapdevila/FraudeCero" target="_blank" class="btn-proyecto">Ver proyecto</a>
+      <div class="row justify-content-center">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+          <div class="card-proyecto animate__animated animate__fadeInUp">
+            <img src="images/proyecto1.png" class="card-img-top" alt="Captura del proyecto FraudeCero">
+            <div class="card-body">
+              <h5 class="card-title">FraudeCero</h5>
+              <p class="card-text">Plataforma para detección de fraudes online con validación de usuarios y dashboard de control.</p>
+              <a href="https://github.com/UriCapdevila/FraudeCero" target="_blank" class="btn-proyecto">Ver proyecto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+          <div class="card-proyecto animate__animated animate__fadeInUp">
+            <img src="images/proyecto2.png" class="card-img-top" alt="Captura del Dashboard de Ventas">
+            <div class="card-body">
+              <h5 class="card-title">Dashboard de Ventas</h5>
+              <p class="card-text">Dashboard interactivo con Power BI y SQL para análisis de ventas multicanal.</p>
+              <a href="#" class="btn-proyecto">Ver proyecto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card">
+          <div class="card-proyecto animate__animated animate__fadeInUp">
+            <img src="images/proyecto3.png" class="card-img-top" alt="Captura del sitio web personal">
+            <div class="card-body">
+              <h5 class="card-title">Sitio Web Personal</h5>
+              <p class="card-text">Este mismo sitio, desarrollado con HTML, CSS, Bootstrap y animaciones personalizadas.</p>
+              <a href="index.html" class="btn-proyecto">Ver sitio</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Proyecto 2 -->
-  <div class="project-card">
-    <div class="card-proyecto animate__animated animate__fadeInUp">
-      <img src="images/proyecto2.png" class="card-img-top" alt="Captura del Dashboard de Ventas">
-      <div class="card-body">
-        <h5 class="card-title">Dashboard de Ventas</h5>
-        <p class="card-text">Dashboard interactivo con Power BI y SQL para análisis de ventas multicanal.</p>
-        <a href="#" class="btn-proyecto">Ver proyecto</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Proyecto 3 -->
-  <div class="project-card">
-    <div class="card-proyecto animate__animated animate__fadeInUp">
-      <img src="images/proyecto3.png" class="card-img-top" alt="Captura del sitio web personal">
-      <div class="card-body">
-        <h5 class="card-title">Sitio Web Personal</h5>
-        <p class="card-text">Este mismo sitio, desarrollado con HTML, CSS, Bootstrap y animaciones personalizadas.</p>
-        <a href="index.html" class="btn-proyecto">Ver sitio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </main>
 
@@ -107,38 +105,49 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" defer></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('modeToggle');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('modeToggle');
 
-      if (toggle) {
-        toggle.addEventListener('change', () => {
-          document.body.classList.toggle('dark-mode');
+    // Leer estado guardado
+    const estadoGuardado = localStorage.getItem('modoOscuro');
+    if (estadoGuardado === 'activado') {
+      document.body.classList.add('dark-mode');
+      if (toggle) toggle.checked = true;
+    }
 
-          const cards = document.querySelectorAll('.card');
-          cards.forEach(card => {
-            card.classList.remove('animate__animated', 'animate__fadeInUp');
-            void card.offsetWidth;
-            card.classList.add('animate__animated', 'animate__fadeInUp');
-          });
-        });
-      }
+    // Activar/desactivar modo oscuro y guardar estado
+    if (toggle) {
+      toggle.addEventListener('change', () => {
+        const isDark = toggle.checked;
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('modoOscuro', isDark ? 'activado' : 'desactivado');
 
-      setInterval(() => {
+        // Reiniciar animaciones en cards
         const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
-          card.classList.remove('animate__animated', 'animate__pulse');
+          card.classList.remove('animate__animated', 'animate__fadeInUp');
           void card.offsetWidth;
-          card.classList.add('animate__animated', 'animate__pulse');
+          card.classList.add('animate__animated', 'animate__fadeInUp');
         });
-      }, 10000);
-    });
-  </script>
+      });
+    }
+
+    // Animación continua en cards cada 10 segundos
+    setInterval(() => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.classList.remove('animate__animated', 'animate__pulse');
+        void card.offsetWidth;
+        card.classList.add('animate__animated', 'animate__pulse');
+      });
+    }, 10000);
+  });
+</script>
 
 </body>
 </html>

@@ -5,14 +5,35 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* === Sección principal de portfolio === */
 #portfolio-content {
-  background-color: var(--bg-color);
-  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background-color: rgba(var(--accent-rgb), 0.95);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(2px);
+  scroll-margin-top: 76px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.dark-mode #portfolio-content {
+  background-color: rgba(var(--accent-rgb), 0.25);
+  box-shadow: var(--shadow-dark);
+}
+
+/* Títulos y textos */
+#portfolio-content h1,
+#portfolio-content p {
+  color: var(--text-color);
+}
+
+/* === Layout de proyectos === */
 #portfolio-content .row {
   display: flex;
   flex-wrap: wrap;
@@ -28,8 +49,8 @@ html, body {
   max-width: 300px;
   margin: 10px;
   background-color: var(--card-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
 }
 
@@ -43,7 +64,7 @@ html, body {
 }
 
 .dark-mode .card-proyecto:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-dark);
 }
 
 /* === Textos dentro de las cards === */
@@ -69,7 +90,6 @@ html, body {
   color: var(--highlight-color);
   transform: scale(1.05);
   text-decoration: none;
-
 }
 
 /* === Animaciones personalizadas === */
